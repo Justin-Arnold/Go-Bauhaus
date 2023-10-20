@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Bauhaus</title>
 </head>
-<body class="flex flex-col items-center bg-orange-500 p-4 font-mono">
+<body class="flex flex-col items-center bg-orange-400 p-4 font-mono">
     <main class="max-w-[1000px] h-[1000px] w-full grid grid-cols-8 grid-rows-5 gap-4 rounded-2xl overflow-clip">
         <div class="col-span-2 bg-slate-50 flex flex-col row-span-5">
             <div class="bg-slate-200 grid place-items-center mt-8 border-y-2 border-black p-4 font-semibold">
@@ -149,7 +149,15 @@
                 </div>
             </div>
         </div>
-        <div class="col-span-3 row-span-2 bg-slate-50"></div>
+        <div class="col-span-3 row-span-2 bg-slate-50 flex flex-col p-8">
+            <div class="p-4 border-black border-2 text-center mb-2">
+                <h3 class="text-2xl font-semibold">About Me</h3>
+            </div>
+            <div>
+                <span class="h-16 w-16 bg-orange-500 border-2 border-black float-left mr-2 mb-2"></span>
+                <p class="font-serif indent-2" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aperiam dolore tempora eaque sunt quam provident perferendis perspiciatis nisi, quae voluptas illo, accusantium ea eveniet magni consectetur amet quibusdam ipsam, quae voluptas illo, accusantium ea eveniet magni consectetur amet quibusdam ipsam!</p>
+            </div>
+        </div>
         <div class="bg-slate-50 col-span-6 row-span-1">
             <p hx-get="/quote" hx-trigger="load" hx-swap="innerHTML">Loading</p>
         </div>

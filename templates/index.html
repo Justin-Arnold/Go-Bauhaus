@@ -144,7 +144,9 @@
             <div class="bg-slate-200"></div>
         </div>
         <div class="col-span-3 row-span-2 bg-slate-50"></div>
-        <div class="bg-slate-50 col-span-6 row-span-1"></div>
+        <div class="bg-slate-50 col-span-6 row-span-1">
+            <p hx-get="/quote" hx-trigger="load" hx-swap="innerHTML">Loading</p>
+        </div>
         <div class="bg-slate-50 row-span-1 col-span-3"></div>
         <div class="bg-slate-50 row-span-2 col-span-3"></div>
         <div class="bg-slate-50 row-span-1 col-span-3"></div>

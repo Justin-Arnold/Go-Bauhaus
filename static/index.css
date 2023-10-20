@@ -3,3 +3,9 @@ body {
     width: 100%;
     background-color: lightblue;
 }
+
+.exciting-text {
+    color: red;
+    font: 50px sans-serif;
+    font-weight: bold;
+}

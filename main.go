@@ -15,6 +15,11 @@ func main() {
 		tmpl.Execute(w, nil)
 	})
 
+	http.HandleFunc("/test", func(w http.ResponseWriter, r *http.Request) {
+		tmpl := template.Must(template.ParseFiles("./templates/fragments/surprise.html"))
+		tmpl.Execute(w, nil)
+	})
+
 	log.Println("Bauhaus running on localhost:8000")
 	log.Fatal(http.ListenAndServe(":8000", nil))
 }

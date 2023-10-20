@@ -1,15 +1,32 @@
 <html lang="en">
 <head>
     <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/static/index.css">
     <meta charset="UTF-8">
     <title>Bauhaus</title>
 </head>
-<body>
-    <main>
-        <header>
-            <h1>Bauhaus</h1>
-        </header>
+<body class="flex flex-col items-center bg-orange-500 px-4">
+    <main class="max-w-[800px] h-full w-full grid grid-cols-8 gap-4">
+        <div class="col-span-2 bg-slate-50 flex flex-col">
+            <div class="bg-slate-200 grid place-items-center mt-8 border-y-2 border-black p-4 font-semibold">
+                Developer
+            </div>
+            <div class="grid grid-cols-6 bg-black gap-[2px] h-full">
+                <div class="bg-slate-50"></div>
+                <div class="bg-slate-500"></div>
+                <div class="bg-slate-50"></div>
+                <div class="bg-slate-50"></div>
+                <div class="bg-slate-300"></div>
+                <div class="bg-slate-50"></div>
+            </div>
+        </div>
+        <div class="bg-slate-50"></div>
+        <div class="bg-slate-50"></div>
+        <div class="bg-slate-50"></div>
+        <div class="bg-slate-50"></div>
+        <div class="bg-slate-50"></div>
+        <div class="bg-slate-50"></div>
     </main>
     <section>
         <p>This is real content.</p>

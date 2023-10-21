@@ -6,8 +6,8 @@
     <title>Bauhaus</title>
 </head>
 <body class="flex flex-col items-center bg-orange-400 p-4 font-mono">
-    <main class="max-w-[1000px] h-[1000px] w-full grid grid-cols-8 grid-rows-5 gap-4 rounded-2xl overflow-clip">
-        <div class="col-span-2 bg-slate-50 flex flex-col row-span-5">
+    <main class="max-w-[1000px] h-[1000px] w-full grid grid-cols-8 grid-rows-5 gap-4">
+        <div class="col-span-2 bg-slate-50 flex flex-col row-span-5  shadow-lg shadow-orange-900">
             <div class="bg-slate-200 grid place-items-center mt-8 border-y-2 border-black p-4 font-semibold">
                 Developer
             </div>
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-span-3 row-span-2 bg-slate-950 relative grid grid-rows-10 grid-cols-10 gap-1">
+        <div class="col-span-3 row-span-2 bg-slate-950 relative grid grid-rows-10 grid-cols-10 gap-1 shadow-lg shadow-orange-900">
             <div class="bg-slate-200"></div>
             <div class="bg-slate-200"></div>
             <div class="bg-slate-200"></div>
@@ -149,7 +149,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-span-3 row-span-2 bg-slate-50 flex flex-col p-8">
+        <div class="col-span-3 row-span-2 bg-slate-50 flex flex-col p-8 shadow-lg shadow-orange-900">
             <div class="p-4 border-black border-2 text-center mb-2">
                 <h3 class="text-2xl font-semibold">About Me</h3>
             </div>
@@ -158,11 +158,21 @@
                 <p class="font-serif indent-2" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aperiam dolore tempora eaque sunt quam provident perferendis perspiciatis nisi, quae voluptas illo, accusantium ea eveniet magni consectetur amet quibusdam ipsam, quae voluptas illo, accusantium ea eveniet magni consectetur amet quibusdam ipsam!</p>
             </div>
         </div>
-        <div class="bg-slate-50 col-span-6 row-span-1">
-            <p hx-get="/quote" hx-trigger="load" hx-swap="innerHTML">Loading</p>
+        <div class="bg-slate-50 col-span-6 row-span-1 shadow-lg shadow-orange-900 flex flex-col justify-between p-8 gap-2">
+            <p hx-get="/quote" hx-trigger="load" hx-swap="innerHTML"></p>
+            <div class="flex justify-between px-8 w-full">
+                <div class="h-8 w-8 rounded-full bg-blue-950 border-black border-2"></div>
+                <div class="h-8 w-8 rounded-full bg-blue-950 border-black border-2"></div>
+                <div class="h-8 w-8 rounded-full bg-orange-500 border-black border-2"></div>
+                <div class="h-8 w-8 rounded-full bg-slate-200 border-black border-2"></div>
+                <div class="h-8 w-8 rounded-full bg-blue-950 border-black border-2"></div>
+                <div class="h-8 w-8 rounded-full bg-orange-500 border-black border-2"></div>
+                <div class="h-8 w-8 rounded-full bg-blue-950 border-black border-2"></div>
+                <div class="h-8 w-8 rounded-full bg-blue-950 border-black border-2"></div>
+            </div>
         </div>
-        <div class="bg-slate-50 row-span-1 col-span-3"></div>
-        <div class="bg-slate-50 row-span-2 col-span-3 p-4 flex flex-col gap-2">
+        <div class="bg-slate-50 row-span-1 col-span-3 shadow-lg shadow-orange-900"></div>
+        <div class="bg-slate-50 row-span-2 col-span-3 p-4 flex flex-col gap-2 shadow-lg shadow-orange-900">
             <h3 class="font-mono text-lg font-semibold">Contact Me</h3>
             <form id="contactForm" class="h-full flex flex-col gap-4">
                 <div class="flex justify-center items-center w-full">
@@ -177,13 +187,8 @@
                 <input type="submit" value="Send" class="text-white font-bold bg-blue-950 p-2"/>
             </form>
         </div>
-        <div class="bg-slate-50 row-span-1 col-span-3">
+        <div class="bg-slate-50 row-span-1 col-span-3 shadow-lg shadow-orange-900">
         </div>
     </main>
-    <section>
-        <p>This is real content.</p>
-        <input type="button" name="button" value="Click me" hx-get="/test" hx-swap="outerHTML">
-        <div id="hidden-content"></div>
-    </section>
 </body>
 </html>

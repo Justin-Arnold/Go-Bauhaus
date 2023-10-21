@@ -21,11 +21,6 @@ func main() {
 		tmpl.Execute(w, nil)
 	})
 
-	http.HandleFunc("/test", func(w http.ResponseWriter, r *http.Request) {
-		tmpl := template.Must(template.ParseFiles("./templates/fragments/surprise.html"))
-		tmpl.Execute(w, nil)
-	})
-
 	http.HandleFunc("/quote", func(w http.ResponseWriter, r *http.Request) {
 		tmpl := template.Must(template.ParseFiles("./templates/fragments/quote.html"))
 		resp, err := http.Get("https://api.quotable.io/random")

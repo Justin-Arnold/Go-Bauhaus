@@ -6,6 +6,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"os"
 )
 type Quote struct {
 	Content string `json:"content"`
@@ -13,6 +14,12 @@ type Quote struct {
 }
 
 func main() {
+	port := os.Getenv("PORT")
+	if port == "" {
+			port = "8080"
+			log.Printf("defaulting to port %s", port)
+	}
+
 	http.Handle("/static/",
 		http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
@@ -37,6 +44,6 @@ func main() {
 		tmpl.Execute(w, data)
 	})
 
-	log.Println("Bauhaus running on localhost:8000")
-	log.Fatal(http.ListenAndServe(":8000", nil))
+	log.Println("Bauhaus running on localhost:"+port)
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
